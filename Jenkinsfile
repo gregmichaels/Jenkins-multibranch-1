@@ -22,7 +22,6 @@ pipeline {
       
       steps {
           echo 'building the application...'
-
       }
     }
   }
