@@ -18,6 +18,12 @@ pipeline {
       }
     }
            
+      stage('Run Snyk Scan') {
+        steps {
+           snykSecurity monitorProjectOnBuild: true, snykInstallation: 'snyk', snykTokenId: 'Snyk-Jenkins'
+        }
+     }
+           
     stage("deploy" {
       
       steps {
