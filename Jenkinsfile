@@ -3,7 +3,7 @@ pipeline {
 
   // Install the Jenkins tools you need for your project / environment
   tools {
-    snyk 'Snyk' // Refers to a global tool configuration for Snyk called 'Snyk'
+    snyk 'snyk' // Refers to a global tool configuration for Snyk called 'Snyk'
   }
 
   stages {
