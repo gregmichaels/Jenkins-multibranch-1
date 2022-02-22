@@ -8,31 +8,31 @@ pipeline {
 
   stages {
 
-    stage("build" {
+    stage("build") {
 
-          steps {
-            echo 'building the application...'
-          }
-        }
+      steps {
+        echo 'building the application...'
+      }
+    }
 
-        stage("test" {
+    stage("test") {
 
-            steps {
-              echo 'testing the application...'
-            }
-          }
+      steps {
+        echo 'testing the application...'
+      }
+    }
 
-          stage("Run Snyk Scan") {
-            steps {
-              snykSecurity monitorProjectOnBuild: true, snykInstallation: 'snyk', snykTokenId: 'Snyk-Jenkins'
-            }
-          }
+    stage("Run Snyk Scan") {
+      steps {
+        snykSecurity monitorProjectOnBuild: true, snykInstallation: 'snyk', snykTokenId: 'Snyk-Jenkins'
+      }
+    }
 
-          stage("deploy" {
+    stage("deploy") {
 
-              steps {
-                echo 'building the application...'
-              }
-            }
-          }
-        }
+      steps {
+        echo 'building the application...'
+      }
+    }
+  }
+}
