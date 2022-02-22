@@ -24,7 +24,7 @@ pipeline {
 
     stage("Run Snyk Scan") {
       steps {
-        snykSecurity monitorProjectOnBuild: true, snykInstallation: 'snyk', snykTokenId: 'Snyk-Jenkins'
+        snykSecurity monitorProjectOnBuild: true, snykInstallation: 'snyk', snykTokenId: 'Snyk-Jenkins', additionalArguments: '--all-projects'
       }
     }
 
